@@ -8,9 +8,32 @@ The function should return the final total of the sum of all of the items in the
 Add a statement that prompts the user to input an integer
 Call the function from step 2 and store its output as a variable
 Add a statement to print the variable to see the final sum
+"""
+#Nicholas Yepes 11/30/23
 
-__________________________________________________________
 
+#function
+def sum_up_to_n():
+    # user puts input
+    user_input = int(input("Enter an integer: "))
+
+    # initital variable
+    total_sum = 0
+
+    # loop and range
+    for num in range(1, user_input + 1):
+        total_sum += num
+
+    return total_sum
+
+# setting result to the answer
+result = sum_up_to_n()
+
+# answer
+print("your answer is:", result)
+
+
+"""""
 Create a Python file named lab_8-2
 
 *** You must write a comment for every chunk of code you write from now on along with your author tag***
@@ -19,6 +42,15 @@ Write a function that will take a list of names and write the body of an email t
 The body should be something like this: "Hi name, You're invited to my party on Friday!" Where name is the name of each person in the list.
 The function should use a for loop and print each invitation after it is generated. There should be at least 3 names in the list.
 
+"""""
 
 
-"""
+def generate_party_invitations(names):
+
+    # Use a for loop to generate an invitation for each name
+    for name in names:
+        invitation = f"Hi {name}, youre invited to my function this friday:) "
+        print(invitation)
+
+names_list = ["mike", "james", "sophia", "madi","mellisa"]
+generate_party_invitations(names_list)
